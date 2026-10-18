@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= judul %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page">
+
+    <%- include('partials/navbar') %>
+
+    <main class="notfound">
+      <h1>Data Tidak Ditemukan</h1>
+      <p>Menu dengan ID "<%= idDicari %>" tidak ada di daftar kami.</p>
+      <a href="/" class="btn">Kembali ke Menu</a>
+    </main>
+
+    <%- include('partials/footer') %>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= judul %> - Flora Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page">
+
+    <%- include('partials/navbar') %>
+
+    <main class="detail">
+      <a href="/#menu" class="kembali">&larr; Kembali ke menu</a>
+
+      <div class="detail-grid">
+        <div class="detail-foto">
+          <img src="/img/<%= item.gambar %>" alt="<%= item.nama %>">
+        </div>
+        <div class="detail-info">
+          <span class="label"><%= item.kategori %></span>
+          <h1><%= item.nama %></h1>
+          <p class="detail-harga">Rp <%= item.harga.toLocaleString('id-ID') %></p>
+          <p class="detail-deskripsi"><%= item.deskripsi %></p>
+          <a href="/" class="btn">Lihat Menu Lainnya</a>
+        </div>
+      </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+  </div>
+</body>
+</html>
